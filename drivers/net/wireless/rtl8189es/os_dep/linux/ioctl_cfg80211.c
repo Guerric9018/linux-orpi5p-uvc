@@ -4143,19 +4143,6 @@ static int cfg80211_rtw_disconnect(struct wiphy *wiphy, struct net_device *ndev,
 }
 
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(2, 6, 31))
-static const char *nl80211_tx_power_setting_str(int type)
-{
-	switch (type) {
-	case NL80211_TX_POWER_AUTOMATIC:
-		return "AUTO";
-	case NL80211_TX_POWER_LIMITED:
-		return "LIMIT";
-	case NL80211_TX_POWER_FIXED:
-		return "FIX";
-	default:
-		return "UNKNOWN";
-	};
-}
 
 static int cfg80211_rtw_set_txpower(struct wiphy *wiphy,
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(3, 8, 0))
